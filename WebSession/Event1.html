@@ -1,0 +1,29 @@
+<HTML>
+	<head>
+		<script>
+			function setBackground(){
+				var a = document.getElementById("para1");
+				a.style.backgroundColor = "RED";
+				console.log("background change to red");
+			}
+			function resetBackground(){
+				
+				var a = document.getElementById("para1");
+				a.style.backgroundColor = "White";
+				console.log("background change to white");
+			}
+		</script>
+		
+		
+	</head>
+	
+	<body>
+		
+		<h2> Event Handling</h2><br/>
+		<p id="para1" onmouseover="setBackground()" onmouseout="resetBackground()">
+			this is test paragraph
+		</p>
+		
+		
+	</body>
+</HTML>

@@ -1,0 +1,33 @@
+<HTML>
+	<head>
+		<script>
+			function addElement()
+			{
+				var item = document.getElementById("itemName").value;
+				console.log("method called... "+item);
+				
+				var itemList = document.getElementsByTagName("ul")[0];
+				console.log("2 : "+itemList);
+				var newItem = document.createElement('li');
+				console.log("3 : "+newItem);
+				newItem.textContent = item+"";
+				itemList.appendChild(newItem);
+				console.log(" item added");
+			}
+		</script>
+	</head>
+	
+	
+	<body>
+		<form id="fid">
+			Item Name : <input type="text" id="itemName"/>
+			<input type="button" value ="Add Item" onclick="addElement()"/>
+			<hr/>
+			<ul id="itemListID">
+				<li> Item - 1</li>
+				<li> Item - 2</li>
+			</ul>
+		</form>
+
+	</body>
+</HTML>

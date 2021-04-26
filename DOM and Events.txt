@@ -1,0 +1,17 @@
+Why we should learn DOM
+1) its a w3 structure, to understand the HTML element structre
+and manage the HTML elements.
+2) so it helps to control the HTML elemenets.
+3) all elements in HTMl page is known to be as NODE.
+   document node
+   comment node
+   element node.
+understanding the node relationship.
+    HTML 
+    |
+Head    BODY
+-------------------------------------------
+Event handling 
+1) which event want to handle
+2) which HTMl element trigger the event.
+3) which java script function will handle this event.

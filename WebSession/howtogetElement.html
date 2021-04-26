@@ -1,0 +1,26 @@
+<HTML>
+	<HEAD>
+		<script>
+			function doThings()
+			{
+				var inputfield1 = document.getElementsByTagName("input")[0];
+				var inputfield2 = document.getElementsByTagName("input")[1];
+				console.log(inputfield1.value);
+				console.log(inputfield2.value);
+				
+				var inputfield3 = document.getElementById("id101");
+				console.log(inputfield3.value);
+				
+				
+			}
+		</script>
+	</HEAD>
+		<input type="text" value="Input field - 1"/><br/>
+		<input type="text" value="Input field - 2"/><br/>
+		<input type="text" value="Input field - 3" id="id101"/><br/>
+		<input type="button" value = "submit" onclick="doThings()"/>
+	
+	<Body>
+
+	</Body>
+</HTML>

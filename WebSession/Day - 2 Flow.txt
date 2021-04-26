@@ -1,0 +1,10 @@
+Flow
+1) Object 
+2) Array Object
+    Constructor
+3) Inheritance
+4) Dom
+	Access Data 
+		getElementByID
+		getElementsByTagName
+5) Events

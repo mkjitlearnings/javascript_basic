@@ -1,0 +1,129 @@
+<html>
+
+<head>
+    <script>
+        var isFound = false;
+        function doThings()
+        {
+            console.log(" doThings "+isFound);
+            
+            var continent = "";
+            var asia = ["India","Japan","Taiwan","Isreal"];
+            var europe = ["England","France","Germany","Malta","Spain"];
+            var africa = ["South Africa","Rwanda","Angola","Kenya","Nigeria"];
+
+            var country = document.getElementById("countryId").value;
+            
+
+            
+            for(var x=0;x<asia.length;x++)
+            {
+                var data = asia[x];
+                if(data == country)
+                {
+                    isFound = true;
+                    continent = "asia";
+                    console.log("--->> Inside country if "+country+" & continent "+continent);
+                    doCreate(continent,country);
+                    break;
+                }
+            }
+
+            if(!isFound)
+            {
+                for(var x=0;x<europe.length;x++)
+                {
+                    var data = europe[x];
+                    if(data == country)
+                    {
+                        isFound = true;
+                        continent = "europe";
+                        console.log("--->> Inside country if "+country+" & continent "+continent);
+                        doCreate(continent,country);
+                        break;
+                    }
+                }
+            }
+            if(!isFound)
+            {
+                for(var x=0;x<africa.length;x++)
+                {
+                    var data = africa[x];
+                    if(data == country)
+                    {
+                        isFound = true;
+                        continent = "africa";
+                        console.log("--->> Inside country if "+country+" & continent "+continent);
+                   
+                        doCreate(continent,country);
+                        break;
+                    }
+                }
+            }
+
+            
+
+           
+        }   
+
+        function doCreate(selectId,optionElement)
+        {
+
+            selectId = selectId+"Id";
+            console.log("======= Inside Do Create =========");
+            console.log(" Select Id "+selectId);
+            console.log("option "+optionElement);
+            
+            var select = document.getElementById(selectId);
+            if(select == null)
+            {
+                var select = document.createElement("select");
+                select.id = selectId;
+            }
+
+            var option = document.createElement("option");
+            option.value= optionElement;
+            option.text = optionElement;
+            select.appendChild(option);
+
+            var mydiv = null;
+            if(selectId == "asiaId")
+                mydiv = document.getElementById("divAsia");
+            if(selectId == "europeId")
+                mydiv = document.getElementById("divEurope");
+            if(selectId == "africaId")
+                mydiv = document.getElementById("divAfrica");
+            
+            mydiv.appendChild(select);
+            console.log("---- doCreate end ----")
+            isFound = false;
+        }
+       
+        
+    </script>
+</head>
+<body >
+    
+    Enter Country <input type="text" id="countryId">
+    <input type="submit" onclick="doThings()">
+
+    
+    <br/><hr/>
+    <div id="divAsia">
+
+    </div>
+    <br/><hr/>
+    <div id="divEurope">
+
+    </div>
+    <br/><hr/>
+    <div id="divAfrica">
+
+    </div>
+    
+    
+
+
+       
+</body>
+</html>
